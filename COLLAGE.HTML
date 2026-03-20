@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAITM Modern Page</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #5b0a02, #705103);
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo::before {
+    content: "🎓 ";
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* NAV ICONS */
+.nav-links a:nth-child(1)::before { content: "🏠 "; }
+.nav-links a:nth-child(2)::before { content: "📘 "; }
+.nav-links a:nth-child(3)::before { content: "📷 "; }
+.nav-links a:nth-child(4)::before { content: "📍 "; }
+.nav-links a:nth-child(5)::before { content: "📞 "; }
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* TITLE */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+/* IMAGE */
+.main-img {
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.main-img:hover {
+    transform: scale(1.03);
+}
+
+/* CARD */
+.card {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* SECTIONS */
+section {
+    margin-top: 40px;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+}
+
+/* MAP */
+.map iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .nav-links {
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">SAITM</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+<div class="container">
+
+    <!-- HOME -->
+    <section id="home">
+        <h1>SAITM</h1>
+        <img src="https://static.boostmytalent.com/img/univ/st.-andrews-satim-gurgaon-campus-admission.webp" class="main-img">
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="card">
+            <p>
+                St. Andrews Institute of Technology & Management is a prestigious college in Gurgaon, Delhi NCR. It offers undergraduate and postgraduate courses in technology and management.
+            </p>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="gallery">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcvQh_Dl4hWP_9-3HQcH_-7vTgN_iFQSn3uQ&s">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcvQh_Dl4hWP_9-3HQcH_-7vTgN_iFQSn3uQ&s">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcvQh_Dl4hWP_9-3HQcH_-7vTgN_iFQSn3uQ&s">
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224512.81608596686!2d76.47893988671872!3d28.449032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d6bb18c31279b%3A0x11d335a5bc228dd6!2sSt.%20Andrews%20Institute%20of%20Technology%20and%20Management!5e0!3m2!1sen!2sin">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="card">
+            <p>📞 Contact: +91 9670439116</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 SAITM | Designed by NISHANT MISHRA</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
